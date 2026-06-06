@@ -37,7 +37,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 shadow-md' : 'bg-transparent py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-lg ${scrolled ? 'py-3' : 'py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <a href="#home" className="flex items-center gap-3">
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <a 
                                 key={link.name} 
                                 href={link.path} 
-                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-600' : 'text-slate-600 hover:text-sky-600'}`}
+                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400' : 'text-slate-300 hover:text-white'}`}
                             >
                                 {link.name}
                             </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className={`${scrolled ? 'text-slate-800' : 'text-white'} hover:text-sky-500 transition-colors`}>
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-slate-300 hover:text-white transition-colors">
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden absolute w-full top-full left-0 bg-white border-b border-gray-200 shadow-2xl"
+                        className="md:hidden absolute w-full top-full left-0 bg-slate-900 border-b border-slate-800 shadow-2xl"
                     >
                         <div className="px-4 pt-2 pb-6 space-y-1">
                             {navLinks.map((link) => (
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     key={link.name} 
                                     href={link.path} 
                                     onClick={() => setIsOpen(false)}
-                                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-600 bg-sky-50' : 'text-slate-600 hover:text-sky-600 hover:bg-slate-50'}`}
+                                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400 bg-slate-800' : 'text-slate-300 hover:text-white hover:bg-slate-800/50'}`}
                                 >
                                     {link.name}
                                 </a>

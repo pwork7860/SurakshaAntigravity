@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, HeartHandshake } from 'lucide-react';
+import { ChevronLeft, ChevronRight, HeartHandshake, ShieldCheck, Sparkles, Droplet, Droplets, Wrench, Leaf, BugOff, Zap, Users, FileCheck } from 'lucide-react';
 
 const servicesList = [
     {
@@ -10,7 +10,8 @@ const servicesList = [
             "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: ShieldCheck
     },
     {
         title: "House Keeping",
@@ -18,8 +19,9 @@ const servicesList = [
         images: [
             "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1628177142898-93e46e462487?auto=format&fit=crop&w=1200&q=80"
-        ]
+            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
+        ],
+        Icon: Sparkles
     },
     {
         title: "STP Management",
@@ -27,7 +29,8 @@ const servicesList = [
         images: [
             "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: Droplet
     },
     {
         title: "WTP Operations",
@@ -35,40 +38,45 @@ const servicesList = [
         images: [
             "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: Droplets
     },
     {
         title: "Plumbing Services",
         desc: "Expert plumbing maintenance and repair services to keep your water systems running smoothly without a hitch.",
         images: [
-            "https://images.unsplash.com/photo-1607472586893-edb57cb5b367?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: Wrench
     },
     {
         title: "Gardening & Landscaping",
         desc: "Beautiful landscape design and regular gardening maintenance to create vibrant, relaxing outdoor spaces.",
         images: [
-            "https://images.unsplash.com/photo-1416879598553-3375619736e4?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f0f?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: Leaf
     },
     {
         title: "Pest Control",
         desc: "Safe and effective pest management solutions to protect your property and ensure a healthy environment.",
         images: [
-            "https://images.unsplash.com/photo-1632823471565-1ec2a7139192?auto=format&fit=crop&w=1200&q=80",
+            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: BugOff
     },
     {
         title: "Electrical Maintenance",
         desc: "Reliable electrical servicing and troubleshooting by certified professionals for uninterrupted operations.",
         images: [
             "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1558227091-a1288b8563eb?auto=format&fit=crop&w=1200&q=80"
-        ]
+            "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80"
+        ],
+        Icon: Zap
     },
     {
         title: "Talent Acquisition",
@@ -76,15 +84,17 @@ const servicesList = [
         images: [
             "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
             "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        Icon: Users
     },
     {
         title: "Payroll & Compliance",
         desc: "Accurate payroll processing and seamless navigation of complex corporate laws to keep you 100% compliant.",
         images: [
             "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=1200&q=80"
-        ]
+            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
+        ],
+        Icon: FileCheck
     }
 ];
 
@@ -154,112 +164,82 @@ const MiniCarousel = ({ images }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="relative bg-brand-bgAlt overflow-hidden text-slate-900">
-            {/* Soft Pastel Background Orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-sky-200/40 rounded-full blur-[120px] animate-blob"></div>
-                <div className="absolute top-[40%] right-[10%] w-[700px] h-[700px] bg-indigo-200/30 rounded-full blur-[120px] animate-blob" style={{ animationDelay: "2s" }}></div>
-                <div className="absolute bottom-[20%] left-[30%] w-[800px] h-[800px] bg-purple-200/30 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "4s" }}></div>
-            </div>
-
-            {/* Subtle Grid Overlay */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMGgtMXYzOWhDMCAzOSAwIDM5LjUgMCAzOS41eiIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
-
+        <section id="services" className="relative bg-white overflow-hidden text-slate-900 py-24 border-t border-gray-100">
             {/* Header Section */}
-            <div className="min-h-[60vh] flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 mb-20">
                 <motion.div 
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center justify-center px-6 py-2.5 bg-white backdrop-blur-xl rounded-full mb-8 border border-sky-100 shadow-sm"
+                    className="inline-flex items-center justify-center px-4 py-1.5 bg-sky-50 rounded-full mb-6 border border-sky-100"
                 >
-                    <h2 className="text-sm font-extrabold tracking-widest text-sky-600 uppercase flex items-center gap-2">
-                        <HeartHandshake size={18} className="text-sky-600" /> Our Services
+                    <h2 className="text-xs font-bold tracking-widest text-sky-600 uppercase flex items-center gap-2">
+                        <HeartHandshake size={16} /> Our Services
                     </h2>
                 </motion.div>
                 <motion.h3 
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter"
+                    transition={{ delay: 0.1 }}
+                    className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight"
                 >
-                    <span className="text-slate-900">
-                        Everything you
-                    </span>
-                    <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 leading-tight">
-                        need.
-                    </span>
+                    Everything you need.
                 </motion.h3>
                 <motion.p 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="text-slate-600 text-lg md:text-3xl max-w-4xl mx-auto leading-relaxed font-light"
+                    transition={{ delay: 0.2 }}
+                    className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
                 >
-                    Explore our comprehensive suite of services, designed with <span className="text-slate-900 font-medium">excellence</span> and your <span className="text-slate-900 font-medium">convenience</span> in mind.
+                    Explore our comprehensive suite of services, designed with excellence and your convenience in mind.
                 </motion.p>
             </div>
 
-            {/* Services List */}
-            <div className="w-full relative z-10 pb-32">
-                {servicesList.map((service, idx) => {
-                    return (
-                        <div 
-                            key={idx}
-                            className="min-h-screen flex flex-col items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-200/50"
-                        >
+            {/* Services List - ZigZag Layout */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="flex flex-col gap-24 md:gap-32">
+                    {servicesList.map((service, idx) => {
+                        const isEven = idx % 2 !== 0;
+                        return (
                             <motion.div 
-                                initial={{ opacity: 0, y: 50 }}
+                                key={idx}
+                                initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                                className="max-w-7xl w-full flex flex-col gap-10 md:gap-16 items-center bg-white backdrop-blur-2xl border border-gray-100 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-16 shadow-xl relative overflow-hidden group"
+                                transition={{ duration: 0.7 }}
+                                className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
                             >
-                                {/* Subtle Hover Glow in Card */}
-                                <div className="absolute inset-0 bg-gradient-to-b from-sky-50/0 via-transparent to-sky-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                                {/* Carousel Section */}
+                                <div className="w-full lg:w-1/2">
+                                    <div className="aspect-[4/3] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 bg-slate-50 relative group">
+                                        <MiniCarousel images={service.images} />
+                                    </div>
+                                </div>
 
-                                {/* Carousel (Now placed first so it shows on top in mobile) */}
-                                <motion.div 
-                                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.1 }}
-                                    className="w-full aspect-[4/3] sm:aspect-video h-[350px] sm:h-auto sm:max-h-[60vh] rounded-[2rem] relative z-10 bg-white p-2 border border-gray-100 shadow-lg"
-                                >
-                                    <MiniCarousel images={service.images} />
-                                </motion.div>
-
-                                {/* Text Info (Now placed second) */}
-                                <div className="w-full max-w-4xl flex flex-col items-center text-center relative z-10">
-                                    <motion.div 
-                                        initial={{ scale: 0 }}
-                                        whileInView={{ scale: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                                        className="w-16 h-16 md:w-20 md:h-20 rounded-[1.2rem] md:rounded-[1.5rem] bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center mb-6 md:mb-10 shadow-lg border border-white"
-                                    >
-                                        <span className="text-white font-extrabold text-2xl md:text-3xl">{(idx + 1).toString().padStart(2, '0')}</span>
-                                    </motion.div>
+                                {/* Text Info Section */}
+                                <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-sky-50 flex items-center justify-center mb-6 text-sky-600 shadow-sm border border-sky-100">
+                                        <service.Icon size={28} strokeWidth={2.5} />
+                                    </div>
                                     
-                                    <h4 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 md:mb-8 tracking-tight">
+                                    <h4 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
                                         {service.title}
                                     </h4>
                                     
-                                    <p className="text-slate-600 text-base md:text-2xl lg:text-3xl leading-relaxed font-light mb-10 max-w-3xl">
+                                    <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
                                         {service.desc}
                                     </p>
                                     
-                                    <a href="#contact" className="px-8 md:px-10 py-4 md:py-5 bg-slate-900 text-white rounded-full font-bold text-lg md:text-xl hover:bg-sky-600 transition-all shadow-md hover:shadow-xl flex items-center gap-3 group/btn transform hover:-translate-y-1">
-                                        Learn more <ChevronRight size={24} className="group-hover/btn:translate-x-1.5 transition-transform" />
+                                    <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-slate-900 hover:text-sky-600 transition-colors group/link px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md">
+                                        Learn more <ChevronRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
                                     </a>
                                 </div>
                             </motion.div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );

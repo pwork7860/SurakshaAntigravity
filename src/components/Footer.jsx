@@ -11,7 +11,6 @@ const Footer = () => {
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
                             <img src={logo} alt="Logo" className="h-12 md:h-16 w-auto object-contain bg-white/10 rounded-xl p-2" />
-                            <span className="font-bold text-xl md:text-2xl tracking-tight text-white leading-tight max-w-[200px] md:max-w-none">Suraksha Facility & Management Services</span>
                         </div>
                         <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-8">
                             Empowering your business with uncompromised security and comprehensive corporate management solutions.
