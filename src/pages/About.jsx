@@ -20,25 +20,14 @@ const About = () => {
                         <p className="text-brand-textAlt text-lg leading-relaxed mb-8">
                             From rigorous talent acquisition to meticulous statutory compliance, our multidisciplinary expertise ensures that your business is not just secure, but positioned for sustainable growth.
                         </p>
-                        
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="glass-card p-4 rounded-xl border-l-4 border-l-brand-accent bg-white">
-                                <h4 className="text-3xl font-bold text-brand-text mb-1">10+</h4>
-                                <p className="text-sm text-brand-textAlt">Years Experience</p>
-                            </div>
-                            <div className="glass-card p-4 rounded-xl border-l-4 border-l-brand-accent bg-white">
-                                <h4 className="text-3xl font-bold text-brand-text mb-1">500+</h4>
-                                <p className="text-sm text-brand-textAlt">Clients Served</p>
-                            </div>
-                        </div>
                     </div>
                     
                     <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-sky-400 rounded-2xl transform rotate-3 scale-105 opacity-20 blur-lg"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-yellow-600 rounded-2xl transform rotate-3 scale-105 opacity-20 blur-lg"></div>
                         <img 
                             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
                             alt="Team Meeting" 
-                            className="relative rounded-2xl shadow-2xl object-cover h-[500px] w-full border border-gray-100"
+                            className="relative rounded-2xl shadow-2xl object-cover h-[500px] w-full border border-slate-800"
                         />
                     </div>
                 </motion.div>

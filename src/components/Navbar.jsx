@@ -37,7 +37,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 bg-slate-950/95 backdrop-blur-md border-b border-white/5 shadow-lg ${scrolled ? 'py-3' : 'py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 bg-black/95 backdrop-blur-md border-b border-white/5 shadow-lg ${scrolled ? 'py-3' : 'py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <a href="#home" className="flex items-center gap-3">
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <a 
                                 key={link.name} 
                                 href={link.path} 
-                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400' : 'text-slate-300 hover:text-white'}`}
+                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-yellow-500' : 'text-slate-300 hover:text-white'}`}
                             >
                                 {link.name}
                             </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     key={link.name} 
                                     href={link.path} 
                                     onClick={() => setIsOpen(false)}
-                                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400 bg-slate-800' : 'text-slate-300 hover:text-white hover:bg-slate-800/50'}`}
+                                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${activeSection === link.path.substring(1) ? 'text-yellow-500 bg-slate-800' : 'text-slate-300 hover:text-white hover:bg-slate-800/50'}`}
                                 >
                                     {link.name}
                                 </a>

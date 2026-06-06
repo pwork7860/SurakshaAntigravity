@@ -5,95 +5,62 @@ import { ChevronLeft, ChevronRight, HeartHandshake, ShieldCheck, Sparkles, Dropl
 const servicesList = [
     {
         title: "Security Services",
-        desc: "State-of-the-art security solutions including manned guarding, electronic surveillance, and risk assessment to ensure absolute safety for your premises.",
-        images: [
-            "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&w=1200&q=80"
-        ],
+        desc: "Highly trained personnel providing round-the-clock guarding, surveillance, and risk management.",
+        images: ["https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"],
         Icon: ShieldCheck
     },
     {
         title: "House Keeping",
         desc: "Comprehensive cleaning and facility upkeep to maintain a pristine, hygienic, and lovable environment for everyone.",
-        images: [
-            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80"],
         Icon: Sparkles
     },
     {
         title: "STP Management",
         desc: "Sewage Treatment Plant operations and maintenance ensuring eco-friendly waste management and compliance.",
-        images: [
-            "https://images.unsplash.com/photo-1590496794008-383c8070b257?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&w=1200&q=80"],
         Icon: Droplet
     },
     {
         title: "WTP Operations",
         desc: "Water Treatment Plant management for clean, safe, and sustainable water supply across your facility.",
-        images: [
-            "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"],
         Icon: Droplets
     },
     {
         title: "Plumbing Services",
         desc: "Expert plumbing maintenance and repair services to keep your water systems running smoothly without a hitch.",
-        images: [
-            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80"],
         Icon: Wrench
     },
     {
         title: "Gardening & Landscaping",
         desc: "Beautiful landscape design and regular gardening maintenance to create vibrant, relaxing outdoor spaces.",
-        images: [
-            "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80"],
         Icon: Leaf
     },
     {
         title: "Pest Control",
         desc: "Safe and effective pest management solutions to protect your property and ensure a healthy environment.",
-        images: [
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80"],
         Icon: BugOff
     },
     {
         title: "Electrical Maintenance",
         desc: "Reliable electrical servicing and troubleshooting by certified professionals for uninterrupted operations.",
-        images: [
-            "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"],
         Icon: Zap
     },
     {
         title: "Talent Acquisition",
         desc: "Strategic recruitment services connecting you with top-tier professionals. We handle end-to-end hiring to build your dream team.",
-        images: [
-            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80"],
         Icon: Users
     },
     {
         title: "Payroll & Compliance",
         desc: "Accurate payroll processing and seamless navigation of complex corporate laws to keep you 100% compliant.",
-        images: [
-            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
-        ],
+        images: ["https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"],
         Icon: FileCheck
     }
 ];
@@ -164,17 +131,20 @@ const MiniCarousel = ({ images }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="relative bg-white overflow-hidden text-slate-900 py-24 border-t border-gray-100">
+        <section id="services" className="relative bg-neutral-950 overflow-hidden text-white py-24 border-t border-neutral-900">
+            {/* Structural Background Pattern */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMGgtMXYzOWhDMCAzOSAwIDM5LjUgMCAzOS41eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIvPjwvc3ZnPg==')] pointer-events-none"></div>
+
             {/* Header Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 mb-20">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center justify-center px-4 py-1.5 bg-sky-50 rounded-full mb-6 border border-sky-100"
+                    className="inline-flex items-center justify-center px-4 py-1.5 bg-yellow-500 text-black shadow-sm mb-6 border border-yellow-600"
                 >
-                    <h2 className="text-xs font-bold tracking-widest text-sky-600 uppercase flex items-center gap-2">
-                        <HeartHandshake size={16} /> Our Services
+                    <h2 className="text-xs font-bold tracking-widest uppercase flex items-center gap-2">
+                        <HeartHandshake size={16} /> Core Services
                     </h2>
                 </motion.div>
                 <motion.h3 
@@ -182,60 +152,70 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight"
+                    className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white tracking-tighter uppercase"
                 >
-                    Everything you need.
+                    Comprehensive Protection
                 </motion.h3>
                 <motion.p 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+                    className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium"
                 >
-                    Explore our comprehensive suite of services, designed with excellence and your convenience in mind.
+                    Deploying elite security protocols and rigorous facility management strategies to safeguard your assets.
                 </motion.p>
             </div>
 
-            {/* Services List - ZigZag Layout */}
+            {/* Services List - Structural Layout */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col gap-24 md:gap-32">
+                <div className="flex flex-col gap-16 md:gap-24">
                     {servicesList.map((service, idx) => {
-                        const isEven = idx % 2 !== 0;
                         return (
                             <motion.div 
                                 key={idx}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial="hidden"
+                                whileInView="visible"
                                 viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.7 }}
-                                className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
+                                className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-16`}
                             >
-                                {/* Carousel Section */}
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 bg-slate-50 relative group">
-                                        <MiniCarousel images={service.images} />
-                                    </div>
-                                </div>
-
                                 {/* Text Info Section */}
-                                <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-sky-50 flex items-center justify-center mb-6 text-sky-600 shadow-sm border border-sky-100">
-                                        <service.Icon size={28} strokeWidth={2.5} />
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, x: idx % 2 === 0 ? -100 : 100 },
+                                        visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+                                    }}
+                                    className="w-full lg:w-1/2 flex flex-col items-start text-left"
+                                >
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-yellow-500 flex items-center justify-center mb-6 text-black shadow-md">
+                                        <service.Icon size={28} strokeWidth={2} />
                                     </div>
                                     
-                                    <h4 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+                                    <h4 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight uppercase">
                                         {service.title}
                                     </h4>
                                     
-                                    <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
+                                    <p className="text-neutral-400 text-base md:text-lg leading-relaxed mb-8">
                                         {service.desc}
                                     </p>
                                     
-                                    <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-slate-900 hover:text-sky-600 transition-colors group/link px-6 py-3 bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md">
-                                        Learn more <ChevronRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
+                                    <a href="#contact" className="inline-flex items-center gap-2 font-bold text-black hover:bg-yellow-400 bg-yellow-500 transition-colors group/link px-8 py-4 shadow-sm">
+                                        SECURE NOW <ChevronRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
                                     </a>
-                                </div>
+                                </motion.div>
+
+                                {/* Carousel Section */}
+                                <motion.div 
+                                    variants={{
+                                        hidden: { opacity: 0, x: idx % 2 === 0 ? 100 : -100, scale: 0.9 },
+                                        visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } }
+                                    }}
+                                    className="w-full lg:w-1/2"
+                                >
+                                    <div className="aspect-[4/3] relative group">
+                                        <MiniCarousel images={service.images} />
+                                    </div>
+                                </motion.div>
                             </motion.div>
                         );
                     })}

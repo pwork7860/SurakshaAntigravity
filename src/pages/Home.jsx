@@ -4,28 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 const heroSlides = [
     {
         image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1920&q=80",
-        headline: "Uncompromised Security Services",
-        subtitle: "State-of-the-art surveillance and expert manned guarding to ensure absolute safety for your premises."
+        headline: "Elite Security Guarding",
+        subtitle: "Highly trained personnel ensuring 24/7 protection and surveillance for your corporate and industrial assets."
     },
     {
-        image: "https://images.unsplash.com/photo-1560053608-13721e0d69e8?auto=format&fit=crop&w=1920&q=80", // Flag/Republic Day vibe
-        headline: "Happy Republic Day",
-        subtitle: "Honoring the spirit of our nation with pride, unity, and an unwavering commitment to your security."
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1920&q=80", 
+        headline: "Professional Bodyguards",
+        subtitle: "Discreet and robust personal protection details tailored specifically for executives, VIPs, and high-net-worth individuals."
     },
     {
-        image: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?auto=format&fit=crop&w=1920&q=80", // Diwali/Lights vibe
-        headline: "Joyous Diwali Greetings",
-        subtitle: "May the festival of lights bring prosperity, happiness, and absolute safety to your enterprise."
-    },
-    {
-        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80",
-        headline: "Comprehensive Facility Care",
-        subtitle: "From expert housekeeping to vital STP & WTP operations, we keep your environment flawless."
-    },
-    {
-        image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1920&q=80", // NCC Day/Uniform vibe
-        headline: "Proudly Celebrating NCC Day",
-        subtitle: "Saluting the discipline, dedication, and leadership that inspire our security protocols every day."
+        image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=1920&q=80", 
+        headline: "Comprehensive Event Security",
+        subtitle: "Deploying highly coordinated security teams to manage crowds and secure high-profile events seamlessly."
     }
 ];
 
@@ -40,7 +30,7 @@ const Home = () => {
     }, []);
 
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
             
             <AnimatePresence mode="wait">
                 <motion.div
@@ -69,8 +59,9 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-sky-400 tracking-[0.05em] uppercase mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                        Suraksha Facility & Management Services
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-widest uppercase drop-shadow-2xl text-center mb-6">
+                        <span className="block text-white mb-2">Suraksha</span>
+                        <span className="block text-yellow-500 text-3xl md:text-5xl lg:text-6xl">Facility & Management Services</span>
                     </h1>
                 </motion.div>
 
@@ -83,20 +74,11 @@ const Home = () => {
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-wide mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                            {heroSlides[currentSlide].headline}
-                        </h2>
-                        <p className="mt-2 text-lg md:text-2xl text-slate-100 max-w-4xl mx-auto font-medium leading-relaxed mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                            {heroSlides[currentSlide].subtitle}
-                        </p>
-                        
-                        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                            <a href="#services" className="px-10 py-5 bg-sky-500 text-white rounded-full font-bold text-xl hover:bg-sky-400 transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(14,165,233,0.5)] border-2 border-transparent">
-                                Explore Services
-                            </a>
-                            <a href="#contact" className="px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-full font-bold text-xl hover:bg-white/20 transition-all shadow-lg hover:shadow-xl">
-                                Contact Us
-                            </a>
+                        {/* Extra text removed as requested */}
+                        <div className="flex justify-center items-center mt-2">
+                            <p className="text-white text-lg md:text-xl font-medium tracking-wider uppercase max-w-2xl mx-auto drop-shadow-lg opacity-90">
+                                Excellence in Security & Facility Care
+                            </p>
                         </div>
                     </motion.div>
                 </AnimatePresence>
@@ -108,7 +90,7 @@ const Home = () => {
                     <button
                         key={idx}
                         onClick={() => setCurrentSlide(idx)}
-                        className={`h-2.5 rounded-full transition-all duration-500 shadow-lg ${currentSlide === idx ? 'w-12 bg-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.8)]' : 'w-3 bg-white/40 hover:bg-white/70'}`}
+                        className={`h-1.5 transition-all duration-300 shadow-lg ${currentSlide === idx ? 'w-16 bg-yellow-500' : 'w-8 bg-white/40 hover:bg-white/70'}`}
                         aria-label={`Go to slide ${idx + 1}`}
                     />
                 ))}

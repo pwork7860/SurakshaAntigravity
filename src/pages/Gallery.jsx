@@ -23,9 +23,9 @@ const Gallery = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center justify-center p-3 bg-white rounded-2xl mb-4 border border-sky-100 shadow-sm"
+                    className="inline-flex items-center justify-center p-3 bg-yellow-500 rounded-2xl mb-4 border border-yellow-600 shadow-sm"
                 >
-                    <h2 className="text-sm font-extrabold tracking-widest text-sky-500 uppercase flex items-center gap-2">
+                    <h2 className="text-sm font-extrabold tracking-widest text-black uppercase flex items-center gap-2">
                         <ImageIcon size={18} /> Gallery
                     </h2>
                 </motion.div>
@@ -58,16 +58,16 @@ const Gallery = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: (idx % 4) * 0.1 }}
-                            className="aspect-square overflow-hidden rounded-[2rem] cursor-pointer shadow-md hover:shadow-2xl hover:shadow-sky-500/20 transition-all group relative border-4 border-white bg-white"
+                            className="aspect-square overflow-hidden rounded-[2rem] cursor-pointer shadow-md hover:shadow-2xl hover:shadow-yellow-500/20 transition-all group relative border-4 border-neutral-800 bg-neutral-900"
                             onClick={() => setSelectedImage(src)}
                         >
                             <img 
                                 src={src} 
                                 alt={`Gallery image ${idx + 1}`} 
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                             />
                             {/* Overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                            <div className="absolute inset-0 bg-gradient-to-t from-yellow-600/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                                 <span className="text-white font-bold tracking-wider drop-shadow-md">VIEW IMAGE</span>
                             </div>
                         </motion.div>

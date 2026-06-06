@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
+import StatsStrip from './components/StatsStrip'
 import Services from './pages/Services'
 import Expertise from './pages/Expertise'
 import Gallery from './pages/Gallery'
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Home />
         <About />
+        <StatsStrip />
         <Services />
         <Expertise />
         <Gallery />

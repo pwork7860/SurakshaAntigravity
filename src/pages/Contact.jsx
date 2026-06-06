@@ -61,20 +61,20 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="glass-card bg-white p-8 md:p-10 rounded-2xl">
+                    <div className="glass-card p-8 md:p-10 rounded-2xl">
                         <h4 className="text-2xl font-bold text-brand-text mb-6">Send us a Message</h4>
                         <form className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-brand-textAlt mb-2">Full Name</label>
-                                <input type="text" id="name" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="John Doe" />
+                                <input type="text" id="name" className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="John Doe" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-brand-textAlt mb-2">Email Address</label>
-                                <input type="email" id="email" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="john@example.com" />
+                                <input type="email" id="email" className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="john@example.com" />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-brand-textAlt mb-2">Message</label>
-                                <textarea id="message" rows="4" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="How can we help you?"></textarea>
+                                <textarea id="message" rows="4" className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="How can we help you?"></textarea>
                             </div>
                             <button type="button" className="w-full py-4 bg-brand-accent text-white rounded-lg font-medium text-lg hover:bg-brand-accentHover transition-colors shadow-lg shadow-brand-accent/30">
                                 Send Message

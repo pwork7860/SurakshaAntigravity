@@ -21,10 +21,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-4">
-                            <li><a href="#home" className="text-slate-400 hover:text-sky-400 transition-colors">Home</a></li>
-                            <li><a href="#about" className="text-slate-400 hover:text-sky-400 transition-colors">About</a></li>
-                            <li><a href="#services" className="text-slate-400 hover:text-sky-400 transition-colors">Services</a></li>
-                            <li><a href="#expertise" className="text-slate-400 hover:text-sky-400 transition-colors">Domain Expertise</a></li>
+                            <li><a href="#home" className="text-slate-400 hover:text-yellow-500 transition-colors">Home</a></li>
+                            <li><a href="#about" className="text-slate-400 hover:text-yellow-500 transition-colors">About</a></li>
+                            <li><a href="#services" className="text-slate-400 hover:text-yellow-500 transition-colors">Services</a></li>
+                            <li><a href="#expertise" className="text-slate-400 hover:text-yellow-500 transition-colors">Domain Expertise</a></li>
                         </ul>
                     </div>
 
@@ -33,21 +33,21 @@ const Footer = () => {
                         <h4 className="text-white font-bold text-lg mb-6">Contact Us</h4>
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 text-slate-400">
-                                <div className="text-sky-400 mt-1"><Mail size={20} /></div>
+                                <div className="text-yellow-500 mt-1"><Mail size={20} /></div>
                                 <div>
                                     <p className="font-medium text-white mb-1">Email</p>
-                                    <a href="mailto:info@surakshaservices.com" className="hover:text-sky-400 transition-colors">info@surakshaservices.com</a>
+                                    <a href="mailto:info@surakshaservices.com" className="hover:text-yellow-500 transition-colors">info@surakshaservices.com</a>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4 text-slate-400">
-                                <div className="text-sky-400 mt-1"><Phone size={20} /></div>
+                                <div className="text-yellow-500 mt-1"><Phone size={20} /></div>
                                 <div>
                                     <p className="font-medium text-white mb-1">Phone</p>
-                                    <a href="tel:+919035870959" className="hover:text-sky-400 transition-colors">+91 9035870959</a>
+                                    <a href="tel:+919035870959" className="hover:text-yellow-500 transition-colors">+91 9035870959</a>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4 text-slate-400">
-                                <div className="text-sky-400 mt-1"><MapPin size={20} /></div>
+                                <div className="text-yellow-500 mt-1"><MapPin size={20} /></div>
                                 <div>
                                     <p className="font-medium text-white mb-1">Address</p>
                                     <p className="leading-relaxed">#167, 1st Floor, Ekadantha Nilaya,<br/>Nyathappa Layout Shanthinikethan Road,<br/>Arakere, Bangalore - 560076</p>
