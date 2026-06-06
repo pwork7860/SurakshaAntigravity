@@ -12,7 +12,7 @@ const Navbar = () => {
             setScrolled(window.scrollY > 50);
             
             // Simple scroll spy
-            const sections = ['home', 'about', 'services', 'expertise', 'contact'];
+            const sections = ['home', 'about', 'services', 'expertise', 'gallery', 'contact'];
             let current = 'home';
             for (const section of sections) {
                 const element = document.getElementById(section);
@@ -31,6 +31,7 @@ const Navbar = () => {
         { name: 'About', path: '#about' },
         { name: 'Services', path: '#services' },
         { name: 'Expertise', path: '#expertise' },
+        { name: 'Gallery', path: '#gallery' },
         { name: 'Contact Us', path: '#contact' },
     ];
 

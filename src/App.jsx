@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Expertise from './pages/Expertise'
+import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Services />
         <Expertise />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

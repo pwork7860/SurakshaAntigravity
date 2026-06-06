@@ -95,7 +95,7 @@ const MiniCarousel = ({ images }) => {
         if (images.length <= 1) return;
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 4000); // Auto-play every 4 seconds
+        }, 5000); // Auto-play every 5 seconds
         return () => clearInterval(timer);
     }, [images.length]);
 
@@ -108,38 +108,42 @@ const MiniCarousel = ({ images }) => {
     };
 
     return (
-        <div className="relative w-full h-full rounded-3xl overflow-hidden group">
+        <div className="relative w-full h-full rounded-[2rem] overflow-hidden group shadow-2xl shadow-black/40 ring-1 ring-white/10">
             <AnimatePresence mode="wait">
                 <motion.img
                     key={currentIndex}
                     src={images[currentIndex]}
-                    initial={{ opacity: 0, scale: 1.05 }}
+                    initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
                     className="absolute inset-0 w-full h-full object-cover"
                 />
             </AnimatePresence>
             
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+            
             {/* Controls */}
             {images.length > 1 && (
-                <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button onClick={prevSlide} className="p-2 rounded-full bg-white/80 text-sky-600 hover:bg-white shadow-md transition-all">
-                        <ChevronLeft size={20} />
+                <div className="absolute inset-0 flex items-center justify-between p-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <button onClick={prevSlide} className="p-4 rounded-full bg-black/30 text-white backdrop-blur-md hover:bg-black/50 ring-1 ring-white/20 transition-all transform hover:scale-110">
+                        <ChevronLeft size={24} />
                     </button>
-                    <button onClick={nextSlide} className="p-2 rounded-full bg-white/80 text-sky-600 hover:bg-white shadow-md transition-all">
-                        <ChevronRight size={20} />
+                    <button onClick={nextSlide} className="p-4 rounded-full bg-black/30 text-white backdrop-blur-md hover:bg-black/50 ring-1 ring-white/20 transition-all transform hover:scale-110">
+                        <ChevronRight size={24} />
                     </button>
                 </div>
             )}
             
             {/* Indicators */}
             {images.length > 1 && (
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
                     {images.map((_, idx) => (
                         <div 
                             key={idx} 
-                            className={`h-2 rounded-full transition-all duration-300 ${currentIndex === idx ? 'w-6 bg-sky-500' : 'w-2 bg-white/70'}`}
+                            className={`h-2 rounded-full transition-all duration-500 ${currentIndex === idx ? 'w-10 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]' : 'w-2 bg-white/40 hover:bg-white/70 cursor-pointer'}`}
+                            onClick={() => setCurrentIndex(idx)}
                         />
                     ))}
                 </div>
@@ -150,53 +154,110 @@ const MiniCarousel = ({ images }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="py-24 relative bg-brand-bgAlt min-h-screen">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
-                <div className="inline-flex items-center justify-center p-3 bg-white rounded-2xl mb-4 border border-sky-100 shadow-sm">
-                    <h2 className="text-sm font-extrabold tracking-widest text-sky-500 uppercase flex items-center gap-2">
-                        <HeartHandshake size={18} /> Our Services
-                    </h2>
-                </div>
-                <h3 className="text-4xl md:text-6xl font-extrabold text-brand-text mb-6">Everything you need.</h3>
-                <p className="text-brand-textAlt text-xl max-w-3xl mx-auto">
-                    Explore our comprehensive suite of services, designed with excellence and your convenience in mind.
-                </p>
+        <section id="services" className="relative bg-slate-950 overflow-hidden text-slate-50">
+            {/* Glowing Background Orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-sky-600/20 rounded-full blur-[120px] animate-blob"></div>
+                <div className="absolute top-[40%] right-[10%] w-[700px] h-[700px] bg-indigo-600/20 rounded-full blur-[120px] animate-blob" style={{ animationDelay: "2s" }}></div>
+                <div className="absolute bottom-[20%] left-[30%] w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "4s" }}></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-                {servicesList.map((service, idx) => {
-                    const isEven = idx % 2 === 0;
-                    return (
-                        <motion.div 
-                            key={idx}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.6 }}
-                            className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center`}
-                        >
-                            {/* Carousel Column */}
-                            <div className="w-full lg:w-1/2 h-[400px] md:h-[500px] rounded-[2.5rem] shadow-xl shadow-sky-900/5 border border-white relative p-2 bg-white">
-                                <MiniCarousel images={service.images} />
-                            </div>
+            {/* Subtle Grid Overlay */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMGgtMXYzOWhDMCAzOSAwIDM5LjUgMCAzOS41eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIvPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
 
-                            {/* Text Column */}
-                            <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6 shadow-sm border border-white">
-                                    <span className="text-sky-600 font-extrabold text-lg">{(idx + 1).toString().padStart(2, '0')}</span>
-                                </div>
-                                <h4 className="text-3xl md:text-4xl font-extrabold text-brand-text mb-6">{service.title}</h4>
-                                <p className="text-brand-textAlt text-lg md:text-xl leading-relaxed font-medium mb-8">
-                                    {service.desc}
-                                </p>
-                                
-                                <div>
-                                    <button className="px-8 py-4 bg-white border-2 border-sky-100 text-sky-600 rounded-full font-bold text-lg hover:bg-sky-50 hover:border-sky-200 transition-all shadow-sm flex items-center gap-2 group w-fit">
-                                        Learn more <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            {/* Header Section */}
+            <div className="min-h-[60vh] flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="inline-flex items-center justify-center px-6 py-2.5 bg-white/5 backdrop-blur-xl rounded-full mb-8 border border-white/10 shadow-[0_0_30px_rgba(14,165,233,0.15)]"
+                >
+                    <h2 className="text-sm font-extrabold tracking-widest text-sky-400 uppercase flex items-center gap-2">
+                        <HeartHandshake size={18} className="text-sky-400" /> Our Services
+                    </h2>
+                </motion.div>
+                <motion.h3 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1, duration: 0.8 }}
+                    className="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter"
+                >
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-slate-400">
+                        Everything you
+                    </span>
+                    <br/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 leading-tight">
+                        need.
+                    </span>
+                </motion.h3>
+                <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="text-slate-300 text-xl md:text-3xl max-w-4xl mx-auto leading-relaxed font-light"
+                >
+                    Explore our comprehensive suite of services, designed with <span className="text-white font-medium">excellence</span> and your <span className="text-white font-medium">convenience</span> in mind.
+                </motion.p>
+            </div>
+
+            {/* Services List */}
+            <div className="w-full relative z-10 pb-32">
+                {servicesList.map((service, idx) => {
+                    return (
+                        <div 
+                            key={idx}
+                            className="min-h-screen flex flex-col items-center justify-center py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5"
+                        >
+                            <motion.div 
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                className="max-w-7xl w-full flex flex-col gap-16 items-center bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 md:p-16 shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden group"
+                            >
+                                {/* Subtle Hover Glow in Card */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-sky-500/0 via-transparent to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+                                {/* Text Info */}
+                                <div className="w-full max-w-4xl flex flex-col items-center text-center relative z-10">
+                                    <motion.div 
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                                        className="w-20 h-20 rounded-[1.5rem] bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center mb-10 shadow-[0_0_30px_rgba(14,165,233,0.4)] border border-sky-400/30"
+                                    >
+                                        <span className="text-white font-extrabold text-3xl">{(idx + 1).toString().padStart(2, '0')}</span>
+                                    </motion.div>
+                                    
+                                    <h4 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+                                        {service.title}
+                                    </h4>
+                                    
+                                    <p className="text-slate-300 text-xl md:text-3xl leading-relaxed font-light mb-12 max-w-3xl">
+                                        {service.desc}
+                                    </p>
+                                    
+                                    <button className="px-10 py-5 bg-white text-slate-950 rounded-full font-bold text-xl hover:bg-sky-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-3 group/btn transform hover:-translate-y-1">
+                                        Learn more <ChevronRight size={24} className="group-hover/btn:translate-x-1.5 transition-transform" />
                                     </button>
                                 </div>
-                            </div>
-                        </motion.div>
+
+                                {/* Carousel */}
+                                <motion.div 
+                                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.8, delay: 0.2 }}
+                                    className="w-full aspect-video max-h-[60vh] rounded-[2rem] relative z-10 bg-slate-900 p-2 border border-white/5 shadow-2xl"
+                                >
+                                    <MiniCarousel images={service.images} />
+                                </motion.div>
+                            </motion.div>
+                        </div>
                     );
                 })}
             </div>
