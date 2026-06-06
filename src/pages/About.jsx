@@ -15,7 +15,7 @@ const About = () => {
                         <h2 className="text-sm font-bold tracking-widest text-brand-accent uppercase mb-3">About Us</h2>
                         <h3 className="text-3xl md:text-5xl font-bold text-brand-text mb-6 leading-tight">Excellence in Corporate Management</h3>
                         <p className="text-brand-textAlt text-lg leading-relaxed mb-6">
-                            Suraksha Services is a premier agency dedicated to providing top-tier security and comprehensive corporate management solutions. We understand that in today's fast-paced environment, organizations need reliable partners to manage their core operations seamlessly.
+                            Suraksha Facility & Management Services is a premier agency dedicated to providing top-tier security and comprehensive corporate management solutions. We understand that in today's fast-paced environment, organizations need reliable partners to manage their core operations seamlessly.
                         </p>
                         <p className="text-brand-textAlt text-lg leading-relaxed mb-8">
                             From rigorous talent acquisition to meticulous statutory compliance, our multidisciplinary expertise ensures that your business is not just secure, but positioned for sustainable growth.

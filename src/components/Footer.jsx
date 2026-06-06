@@ -1,4 +1,5 @@
-import { ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../assets/footer-logo.png';
 
 const Footer = () => {
     return (
@@ -8,9 +9,9 @@ const Footer = () => {
                     
                     {/* Brand Col */}
                     <div className="lg:col-span-2">
-                        <div className="flex items-center gap-2 mb-6">
-                            <div className="text-sky-400"><ShieldCheck size={28} /></div>
-                            <span className="font-bold text-2xl tracking-tight text-white">Suraksha <span className="text-sky-400 font-light">Services</span></span>
+                        <div className="flex items-center gap-3 mb-6">
+                            <img src={logo} alt="Logo" className="h-12 md:h-16 w-auto object-contain bg-white/10 rounded-xl p-2" />
+                            <span className="font-bold text-xl md:text-2xl tracking-tight text-white leading-tight max-w-[200px] md:max-w-none">Suraksha Facility & Management Services</span>
                         </div>
                         <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-8">
                             Empowering your business with uncompromised security and comprehensive corporate management solutions.
@@ -60,7 +61,7 @@ const Footer = () => {
                 {/* Copyright Row */}
                 <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-sm">
-                        &copy; 2026 Suraksha Services. All rights reserved.
+                        &copy; 2026 Suraksha Facility & Management Services. All rights reserved.
                     </p>
                     <p className="text-slate-500 text-sm flex items-center gap-1">
                         Powered by <span className="text-white font-medium">JL Corp</span>

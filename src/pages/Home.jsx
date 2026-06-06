@@ -69,8 +69,8 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-sky-400 tracking-[0.1em] uppercase mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                        Suraksha Security Services
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-sky-400 tracking-[0.05em] uppercase mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+                        Suraksha Facility & Management Services
                     </h1>
                 </motion.div>
 

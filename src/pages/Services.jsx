@@ -241,9 +241,9 @@ const Services = () => {
                                         {service.desc}
                                     </p>
                                     
-                                    <button className="px-10 py-5 bg-white text-slate-950 rounded-full font-bold text-xl hover:bg-sky-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-3 group/btn transform hover:-translate-y-1">
+                                    <a href="#contact" className="px-10 py-5 bg-white text-slate-950 rounded-full font-bold text-xl hover:bg-sky-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-3 group/btn transform hover:-translate-y-1">
                                         Learn more <ChevronRight size={24} className="group-hover/btn:translate-x-1.5 transition-transform" />
-                                    </button>
+                                    </a>
                                 </div>
 
                                 {/* Carousel */}

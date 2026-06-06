@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/footer-logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,12 +37,11 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-4' : 'bg-white/80 backdrop-blur-sm py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/5 py-3 shadow-lg' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    <a href="#home" className="flex items-center gap-2">
-                        <div className="text-brand-accent"><ShieldCheck size={28} /></div>
-                        <span className="font-bold text-2xl tracking-tight text-brand-text">Suraksha <span className="text-brand-accent font-light">Services</span></span>
+                    <a href="#home" className="flex items-center gap-3">
+                        <img src={logo} alt="Suraksha Facility & Management Services Logo" className="h-10 md:h-14 w-auto object-contain" />
                     </a>
                     
                     {/* Desktop Nav */}
@@ -50,7 +50,7 @@ const Navbar = () => {
                             <a 
                                 key={link.name} 
                                 href={link.path} 
-                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-brand-accent' : 'text-brand-textAlt hover:text-brand-accent'}`}
+                                className={`text-sm font-semibold transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400'}`}
                             >
                                 {link.name}
                             </a>
@@ -59,8 +59,8 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-brand-text hover:text-brand-accent">
-                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-white hover:text-sky-400 transition-colors">
+                            {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden glass absolute w-full top-full left-0 border-t border-gray-200"
+                        className="md:hidden absolute w-full top-full left-0 bg-slate-900 border-b border-slate-800 shadow-2xl"
                     >
                         <div className="px-4 pt-2 pb-6 space-y-1">
                             {navLinks.map((link) => (
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     key={link.name} 
                                     href={link.path} 
                                     onClick={() => setIsOpen(false)}
-                                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors ${activeSection === link.path.substring(1) ? 'text-brand-accent bg-blue-50' : 'text-brand-textAlt hover:text-brand-accent hover:bg-slate-50'}`}
+                                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${activeSection === link.path.substring(1) ? 'text-sky-400 bg-slate-800' : 'text-slate-300 hover:text-sky-400 hover:bg-slate-800/50'}`}
                                 >
                                     {link.name}
                                 </a>
