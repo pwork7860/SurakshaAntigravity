@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const heroSlides = [
     {
-        image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1920&q=80",
+        image: "https://images.unsplash.com/photo-1579820010410-c10411aaaa88?auto=format&fit=crop&w=1920&q=80",
         headline: "Elite Security Guarding",
         subtitle: "Highly trained personnel ensuring 24/7 protection and surveillance for your corporate and industrial assets."
     },
@@ -53,15 +53,15 @@ const Home = () => {
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
                 
-                {/* Static Top Heading (Company Name - Increased Size) */}
+                {/* Static Top Heading (Company Name - Decreased Size & Updated Colors) */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-widest uppercase drop-shadow-2xl text-center mb-6">
-                        <span className="block text-white mb-2">Suraksha</span>
-                        <span className="block text-yellow-500 text-3xl md:text-5xl lg:text-6xl">Facility & Management Services</span>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-widest uppercase drop-shadow-2xl text-center mb-6">
+                        <span className="block text-yellow-500 mb-2">Suraksha Facility &</span>
+                        <span className="block text-white text-2xl md:text-4xl lg:text-5xl">Management Services</span>
                     </h1>
                 </motion.div>
 

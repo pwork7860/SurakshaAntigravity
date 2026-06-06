@@ -6,7 +6,7 @@ const servicesList = [
     {
         title: "Security Services",
         desc: "Highly trained personnel providing round-the-clock guarding, surveillance, and risk management.",
-        images: ["https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"],
+        images: ["https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80"],
         Icon: ShieldCheck
     },
     {
@@ -199,7 +199,7 @@ const Services = () => {
                                         {service.desc}
                                     </p>
                                     
-                                    <a href="#contact" className="inline-flex items-center gap-2 font-bold text-black hover:bg-yellow-400 bg-yellow-500 transition-colors group/link px-8 py-4 shadow-sm">
+                                    <a href="#contact" className="inline-flex items-center gap-2 font-bold text-black hover:bg-yellow-400 bg-yellow-500 transition-colors group/link px-8 py-4 shadow-sm rounded-full">
                                         SECURE NOW <ChevronRight size={18} className="group-hover/link:translate-x-1 transition-transform" />
                                     </a>
                                 </motion.div>

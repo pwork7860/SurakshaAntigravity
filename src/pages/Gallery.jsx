@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Image as ImageIcon } from 'lucide-react';
 
 const galleryImages = [
-    "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
     "https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&w=1200&q=80",
@@ -17,7 +17,7 @@ const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
-        <section id="gallery" className="py-24 relative bg-brand-bgAlt border-t border-gray-100">
+        <section id="gallery" className="py-24 relative bg-brand-bgAlt">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
