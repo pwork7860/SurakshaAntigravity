@@ -154,16 +154,16 @@ const MiniCarousel = ({ images }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="relative bg-slate-950 overflow-hidden text-slate-50">
-            {/* Glowing Background Orbs */}
+        <section id="services" className="relative bg-brand-bgAlt overflow-hidden text-slate-900">
+            {/* Soft Pastel Background Orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-sky-600/20 rounded-full blur-[120px] animate-blob"></div>
-                <div className="absolute top-[40%] right-[10%] w-[700px] h-[700px] bg-indigo-600/20 rounded-full blur-[120px] animate-blob" style={{ animationDelay: "2s" }}></div>
-                <div className="absolute bottom-[20%] left-[30%] w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "4s" }}></div>
+                <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-sky-200/40 rounded-full blur-[120px] animate-blob"></div>
+                <div className="absolute top-[40%] right-[10%] w-[700px] h-[700px] bg-indigo-200/30 rounded-full blur-[120px] animate-blob" style={{ animationDelay: "2s" }}></div>
+                <div className="absolute bottom-[20%] left-[30%] w-[800px] h-[800px] bg-purple-200/30 rounded-full blur-[150px] animate-blob" style={{ animationDelay: "4s" }}></div>
             </div>
 
             {/* Subtle Grid Overlay */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMGgtMXYzOWhDMCAzOSAwIDM5LjUgMCAzOS41eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIvPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMGgtMXYzOWhDMCAzOSAwIDM5LjUgMCAzOS41eiIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
 
             {/* Header Section */}
             <div className="min-h-[60vh] flex flex-col items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -171,10 +171,10 @@ const Services = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center justify-center px-6 py-2.5 bg-white/5 backdrop-blur-xl rounded-full mb-8 border border-white/10 shadow-[0_0_30px_rgba(14,165,233,0.15)]"
+                    className="inline-flex items-center justify-center px-6 py-2.5 bg-white backdrop-blur-xl rounded-full mb-8 border border-sky-100 shadow-sm"
                 >
-                    <h2 className="text-sm font-extrabold tracking-widest text-sky-400 uppercase flex items-center gap-2">
-                        <HeartHandshake size={18} className="text-sky-400" /> Our Services
+                    <h2 className="text-sm font-extrabold tracking-widest text-sky-600 uppercase flex items-center gap-2">
+                        <HeartHandshake size={18} className="text-sky-600" /> Our Services
                     </h2>
                 </motion.div>
                 <motion.h3 
@@ -182,13 +182,13 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter"
+                    className="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter"
                 >
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-slate-400">
+                    <span className="text-slate-900">
                         Everything you
                     </span>
                     <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 leading-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 leading-tight">
                         need.
                     </span>
                 </motion.h3>
@@ -197,9 +197,9 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="text-slate-300 text-xl md:text-3xl max-w-4xl mx-auto leading-relaxed font-light"
+                    className="text-slate-600 text-lg md:text-3xl max-w-4xl mx-auto leading-relaxed font-light"
                 >
-                    Explore our comprehensive suite of services, designed with <span className="text-white font-medium">excellence</span> and your <span className="text-white font-medium">convenience</span> in mind.
+                    Explore our comprehensive suite of services, designed with <span className="text-slate-900 font-medium">excellence</span> and your <span className="text-slate-900 font-medium">convenience</span> in mind.
                 </motion.p>
             </div>
 
@@ -209,53 +209,53 @@ const Services = () => {
                     return (
                         <div 
                             key={idx}
-                            className="min-h-screen flex flex-col items-center justify-center py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5"
+                            className="min-h-screen flex flex-col items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-200/50"
                         >
                             <motion.div 
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 1, ease: "easeOut" }}
-                                className="max-w-7xl w-full flex flex-col gap-16 items-center bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 md:p-16 shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden group"
+                                className="max-w-7xl w-full flex flex-col gap-10 md:gap-16 items-center bg-white backdrop-blur-2xl border border-gray-100 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-16 shadow-xl relative overflow-hidden group"
                             >
                                 {/* Subtle Hover Glow in Card */}
-                                <div className="absolute inset-0 bg-gradient-to-b from-sky-500/0 via-transparent to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-sky-50/0 via-transparent to-sky-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
-                                {/* Text Info */}
+                                {/* Carousel (Now placed first so it shows on top in mobile) */}
+                                <motion.div 
+                                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.8, delay: 0.1 }}
+                                    className="w-full aspect-[4/3] sm:aspect-video h-[350px] sm:h-auto sm:max-h-[60vh] rounded-[2rem] relative z-10 bg-white p-2 border border-gray-100 shadow-lg"
+                                >
+                                    <MiniCarousel images={service.images} />
+                                </motion.div>
+
+                                {/* Text Info (Now placed second) */}
                                 <div className="w-full max-w-4xl flex flex-col items-center text-center relative z-10">
                                     <motion.div 
                                         initial={{ scale: 0 }}
                                         whileInView={{ scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                                        className="w-20 h-20 rounded-[1.5rem] bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center mb-10 shadow-[0_0_30px_rgba(14,165,233,0.4)] border border-sky-400/30"
+                                        className="w-16 h-16 md:w-20 md:h-20 rounded-[1.2rem] md:rounded-[1.5rem] bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center mb-6 md:mb-10 shadow-lg border border-white"
                                     >
-                                        <span className="text-white font-extrabold text-3xl">{(idx + 1).toString().padStart(2, '0')}</span>
+                                        <span className="text-white font-extrabold text-2xl md:text-3xl">{(idx + 1).toString().padStart(2, '0')}</span>
                                     </motion.div>
                                     
-                                    <h4 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+                                    <h4 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 md:mb-8 tracking-tight">
                                         {service.title}
                                     </h4>
                                     
-                                    <p className="text-slate-300 text-xl md:text-3xl leading-relaxed font-light mb-12 max-w-3xl">
+                                    <p className="text-slate-600 text-base md:text-2xl lg:text-3xl leading-relaxed font-light mb-10 max-w-3xl">
                                         {service.desc}
                                     </p>
                                     
-                                    <a href="#contact" className="px-10 py-5 bg-white text-slate-950 rounded-full font-bold text-xl hover:bg-sky-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] flex items-center gap-3 group/btn transform hover:-translate-y-1">
+                                    <a href="#contact" className="px-8 md:px-10 py-4 md:py-5 bg-slate-900 text-white rounded-full font-bold text-lg md:text-xl hover:bg-sky-600 transition-all shadow-md hover:shadow-xl flex items-center gap-3 group/btn transform hover:-translate-y-1">
                                         Learn more <ChevronRight size={24} className="group-hover/btn:translate-x-1.5 transition-transform" />
                                     </a>
                                 </div>
-
-                                {/* Carousel */}
-                                <motion.div 
-                                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                    className="w-full aspect-video max-h-[60vh] rounded-[2rem] relative z-10 bg-slate-900 p-2 border border-white/5 shadow-2xl"
-                                >
-                                    <MiniCarousel images={service.images} />
-                                </motion.div>
                             </motion.div>
                         </div>
                     );
